@@ -1,17 +1,25 @@
 <template>
   <section class="benefits">
     <h1 class="benefits--title">{{ $t('benefits.title') }}</h1>
-    <p class="benefits--description">{{ $t('benefits.description') }}</p>
     <div class="benefits--wrapper">
-      <div class="benefits--wrapper__item" v-for="benefit in benefits" :key="`benefit-${benefit}`">
-        <div class="benefits--wrapper__item--icon">
-          <img :src="`/general/benefits/icon_${benefit}.png`" :alt="$t(`benefits.${benefit}_title`)" />
-        </div>
-        <div class="benefits--wrapper__item--content">
-          <h2 class="benefits--wrapper__item--content__title">{{ $t(`benefits.${benefit}_title`) }}</h2>
-          <p class="benefits--wrapper__item--content__description">{{ $t(`benefits.${benefit}_description`) }}</p>
+
+      <div class="benefits--wrapper__list">
+        <div class="benefits--wrapper__list--item" v-for="benefit in benefits" :key="`benefit-${benefit}`">
+          <div class="benefits--wrapper__list--item__title">
+            <span class="benefits--wrapper__list--item__title--icon">
+              <img src="/general/benefits/check.png" alt="SiopiFácil" />
+            </span>
+            {{ $t(`benefits.${benefit}_title`) }}
+          </div>
+          <div class="benefits--wrapper__list--item__description">
+            {{ $t(`benefits.${benefit}_description`) }}
+          </div>
         </div>
       </div>
+      <div class="benefits--wrapper__image">
+        <img src="/general/benefits/image_1.png" alt="SiopiFácil" />
+      </div>
+
     </div>
   </section>
 </template>
@@ -22,7 +30,7 @@ export default {
   name: 'Benefits',
   data() {
     return {
-      benefits: ['list', 'information', 'documents', 'realtime']
+      benefits: ['agility', 'organization', 'security', 'productivity', 'reliability', 'convenience']
     }
   }
 }
@@ -30,77 +38,81 @@ export default {
 
 <style lang="scss">
 .benefits {
-  @apply p-8 text-primary;
-
+  @apply bg-gray-lighter p-8 grid gap-y-8;
   &--title {
     @apply text-center uppercase font-bold text-lg;
   }
-  &--description {
-    @apply pt-2 text-center text-sm;
-  }
   &--wrapper {
-    @apply mx-10 pt-8 grid gap-y-8;
-    &__item {
-      @apply grid gap-y-4 p-8 bg-white rounded-xl h-full shadow-default transition-all duration-500 ease-in-out cursor-default;
-      &:nth-child(even) {
-        .benefits--wrapper__item--icon {
-          @apply bg-orange-lighter;
+    @apply grid gap-y-8;
+    &__list {
+      @apply grid gap-y-8;
+      &--item {
+        &:nth-child(even) {
+          .benefits--wrapper__list--item__title--icon {
+            @apply bg-orange;
+          }
         }
-      }
-      &--icon {
-        @apply bg-blue-lighter rounded-full flex items-center justify-center;
-        height: 40px;
-        aspect-ratio: 1;
-        img {
-          height: 24px;
-        }
-      }
-      &--content {
-        @apply grid gap-y-4;
         &__title {
-          @apply font-semibold;
+          @apply flex items-center gap-x-2 font-bold;
+          &--icon {
+            @apply bg-blue rounded-full p-0 shadow-md;
+            img {
+              height: 14px;
+              aspect-ratio: 1;
+            }
+          }
         }
         &__description {
-          @apply text-sm;
+          @apply text-sm text-justify
         }
       }
     }
+    &__image {
+      img {
+        @apply w-full rounded-2xl shadow-lg;
+      }
+    }
   }
-  
 }
 
 @screen lg {
-  .benefits {
-    @apply py-16;
-    &--title {
-      @apply text-xl;
-    }
-    &--description {
-      @apply text-base;
-    }
-    &--wrapper {
-      @apply pt-16 mx-auto gap-x-6 grid-cols-4;
-      max-width: 1100px;
-      &__item {
-        @apply content-start;
-        &:hover {
-          @apply shadow-default-hover;
-        }
-        &--icon {
-          height: 48px;
-          img {
-            height: 30px;
+  
+    .benefits {
+      @apply py-20 gap-y-8; 
+
+      padding-left: 8.25%;
+      padding-right: 8.25%;
+
+      &--title {
+        @apply text-left text-xl;
+      }
+      &--wrapper {
+        @apply gap-x-40;
+        grid-template-columns: auto 1fr;
+        &__list {
+          &--item {
+            @apply grid gap-y-2;
+            &__title {
+              &--icon {
+                @apply p-1;
+                img {
+                  height: 18px;
+                }
+              }
+            }
+            &__description {
+              @apply text-base text-left;
+              padding-left: calc(18px + 1rem);
+            }
           }
         }
-        &--content {
-          &__description {
-            @apply text-base;
+        &__image {
+          img {
+            @apply h-full object-cover;
           }
         }
       }
     }
-    
-  }
 }
 
 </style>

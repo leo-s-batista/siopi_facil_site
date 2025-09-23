@@ -3,7 +3,7 @@
 
         <nav :class="['navbar', { scrollTop }]">
             <router-link to="/" class="navbar--logo">
-                <img src="/general/logo.png" alt="SiopiFácil" />
+                <img src="/general/menu/logo.png" alt="SiopiFácil" />
             </router-link>
             <ul class="navbar--navigation">
                 <router-link tag="li" class="navbar--navigation__item" v-for="section in sections" :key="`section-item-${section}`" :to="$t(`routes.${section}`)">{{ $t(`sections.${section}`) }}</router-link>
@@ -19,7 +19,7 @@
             </ul>
 
             <div @click="mobileMenu = true" class="navbar--menu">
-                <img src="/general/menu.png" alt="Menu" />
+                <img src="/general/menu/menu.png" alt="Menu" />
             </div>
         </nav>
 
@@ -39,7 +39,7 @@ export default {
     },
     data() {
         return {
-            sections: ['benefits', 'features', 'testimonials', 'plans', 'faq', 'contact'],
+            sections: ['features','benefits', 'testimonials', 'plans', 'faq', 'contact'],
             mobileMenu: false
         }
     },

@@ -13,14 +13,14 @@
         <button>
           {{ $t('home.startNow') }}
         </button>
-        <a>{{ $t('home.contact') }}</a>
+        <a>{{ $t('home.demo') }}</a>
       </div>
     </div>
     <div class="home--right">
       <div class="home--right__wrapper">
         <picture>
-          <source srcset="/general/mobile_siopi_list.png" media="(max-width: 1023px)" />
-          <img src="/general/desktop_siopi_list.png" alt="SiopiFácil Lista Ordens de Serviço" />
+          <source srcset="/general/home/mobile_siopi_list.png" media="(max-width: 1023px)" />
+          <img src="/general/home/desktop_siopi_list.png" alt="SiopiFácil Lista Ordens de Serviço" />
         </picture>
       </div>
     </div>

@@ -2,8 +2,8 @@
   <div class="layout">
     <CustomMenu />
     <Home />
-    <Benefits />
     <Features />
+    <Benefits />
     <CustomFooter />
   </div>
 </template>
@@ -14,8 +14,8 @@ import { mapGetters } from 'vuex'
 import CustomMenu from './components/CustomMenu'
 import CustomFooter from './components/CustomFooter'
 import Home from './views/Home'
-import Benefits from './views/Benefits'
 import Features from './views/Features'
+import Benefits from './views/Benefits'
 
 export default {
   name: 'App',
@@ -23,8 +23,8 @@ export default {
     CustomMenu,
     CustomFooter,
     Home,
-    Benefits,
-    Features
+    Features,
+    Benefits
   },
   computed: {
       ...mapGetters(['loading'])

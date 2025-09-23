@@ -1,33 +1,33 @@
 {
     "routes": {
         "home": "/",
-        "benefits": "/beneficios",
         "features": "/funcionalidades",
+        "benefits": "/beneficios",
         "testimonials": "/depoimentos",
         "plans": "/planos",
-        "faq": "/faq",
         "contact": "/contato",
+        "faq": "/faq",
         "startNow": "/comecar-agora"
     },
     "sections": {
         "home": "Início",
+        "features": "Recursos",
         "benefits": "Benefícios",
-        "features": "Funcionalidades",
         "testimonials": "Depoimentos",
         "plans": "Planos",
-        "faq": "Dúvidas",
         "contact": "Contato",
+        "faq": "Dúvidas",
         "login": "Login",
-        "startNow": "Começar Agora"
+        "startNow": "Começar grátis agora"
     },
     "home": {
         "title": "Gerencie e acompanhe suas<br /> ordens de serviço com <br /><span class='typing'></span>",
-        "description": "Uma plataforma que centraliza as ordens de serviço da CAIXA, oferecendo controle, organização e agilidade em um único lugar. <br/>De forma rápida, intuitiva e segura.",
-        "startNow": "Começar Agora",
-        "contact": "Entre em contato"
+        "description": "Com o SiopiFácil, sua empresa acompanha todas as convocações, conclusões e relatórios em um só painel. Mais agilidade, organização e segurança para o seu dia a dia.",
+        "startNow": "Começar grátis agora",
+        "demo": "Ver demonstração"
     },
-    "benefits": {
-        "title": "Como Funciona",
+    "features": {
+        "title": "Recursos",
         "description": "Recursos essenciais para otimizar seu fluxo de trabalho",
         "list_title": "Listar e Filtrar",
         "list_description": "Visualize todas as ordens de serviço com filtros avançados por status, cliente, data e localização.",
@@ -37,5 +37,21 @@
         "documents_description": "Faça upload e download de documentos relacionados com segurança e organização total.",
         "realtime_title": "Acompanhamento em Tempo Real",
         "realtime_description": "Monitore prazos e atualizações de status instantaneamente para nunca perder um prazo."
+    },
+    "benefits": {
+        "title": "Benefícios",
+        "agility_title": "Agilidade",
+        "agility_description": "Todas as ordens de serviço em um só painel, sem perda de tempo.",
+        "organization_title": "Organização",
+        "organization_description": "Informações estruturadas e fáceis de consultar.",
+        "security_title": "Segurança",
+        "security_description": "Armazenamento confiável e controle de acessos.",
+        "productivity_title": "Produtividade",
+        "productivity_description": "Menos tarefas manuais, mais tempo para o que importa.",
+        "reliability_title": "Confiabilidade",
+        "reliability_description": "Atualizações em tempo real, sem risco de perder prazos.",
+        "convenience_title": "Praticidade",
+        "convenience_description": "Acesse relatórios e documentos sem precisar navegar em múltiplos sistemas."
+          
     }
 }
