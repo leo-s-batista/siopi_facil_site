@@ -16,6 +16,7 @@ import './assets/base.scss';
 
 import './plugins/google-analytics.js'
 import './plugins/components.js'
+import './plugins/vue-typed-js.js'
 
 const i18n = new VueI18n({
   locale: 'pt',

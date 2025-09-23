@@ -10,6 +10,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/:section',
+    name: 'home_with_section',
+    component: Home
   }
 ]
 

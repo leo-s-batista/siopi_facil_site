@@ -1,3 +1,41 @@
 {
-    
+    "routes": {
+        "home": "/",
+        "benefits": "/beneficios",
+        "features": "/funcionalidades",
+        "testimonials": "/depoimentos",
+        "plans": "/planos",
+        "faq": "/faq",
+        "contact": "/contato",
+        "startNow": "/comecar-agora"
+    },
+    "sections": {
+        "home": "Início",
+        "benefits": "Benefícios",
+        "features": "Funcionalidades",
+        "testimonials": "Depoimentos",
+        "plans": "Planos",
+        "faq": "Dúvidas",
+        "contact": "Contato",
+        "login": "Login",
+        "startNow": "Começar Agora"
+    },
+    "home": {
+        "title": "Gerencie e acompanhe suas<br /> ordens de serviço com <br /><span class='typing'></span>",
+        "description": "Uma plataforma que centraliza as ordens de serviço da CAIXA, oferecendo controle, organização e agilidade em um único lugar. <br/>De forma rápida, intuitiva e segura.",
+        "startNow": "Começar Agora",
+        "contact": "Entre em contato"
+    },
+    "benefits": {
+        "title": "Como Funciona",
+        "description": "Recursos essenciais para otimizar seu fluxo de trabalho",
+        "list_title": "Listar e Filtrar",
+        "list_description": "Visualize todas as ordens de serviço com filtros avançados por status, cliente, data e localização.",
+        "information_title": "Informações Detalhadas",
+        "information_description": "Acesse mapas, dados do cliente, prazos e custos em uma interface intuitiva e organizada.",
+        "documents_title": "Gestão de Documentos",
+        "documents_description": "Faça upload e download de documentos relacionados com segurança e organização total.",
+        "realtime_title": "Acompanhamento em Tempo Real",
+        "realtime_description": "Monitore prazos e atualizações de status instantaneamente para nunca perder um prazo."
+    }
 }
