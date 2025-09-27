@@ -1,5 +1,7 @@
 <template>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <img src="/general/menu/logo.png" alt="SiopiFácil" />
+    </footer>
 </template>
 
 <script>
@@ -8,4 +10,13 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+.footer {
+    @apply py-8 flex justify-center items-center;
+    img {
+        @apply h-12;
+    }
+}
+
+</style>

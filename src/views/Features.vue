@@ -2,7 +2,7 @@
   <section class="features">
     <h1 class="features--title">{{ $t('features.title') }}</h1>
     <p class="features--description">{{ $t('features.description') }}</p>
-    <div class="features--wrapper">
+    <div class="features--wrapper" data-aos="fade-up" data-aos-duration="750">
       <div class="features--wrapper__item" v-for="feature in features" :key="`feature-${feature}`">
         <div class="features--wrapper__item--icon">
           <img :src="`/general/features/icon_${feature}.png`" :alt="$t(`features.${feature}_title`)" />

@@ -52,6 +52,25 @@
         "reliability_description": "Atualizações em tempo real, sem risco de perder prazos.",
         "convenience_title": "Praticidade",
         "convenience_description": "Acesse relatórios e documentos sem precisar navegar em múltiplos sistemas."
-          
+    },
+    "testimonials": {
+        "title": "O que nossos clientes dizem"
+    },
+    "plans": {
+        "title": "Planos",
+        "description": "Escolha o plano que melhor se adequa ao seu fluxo de trabalho.",
+        "choose": "Escolher plano",
+        "trial": "Todos os planos tem 15 dias de teste gratuito."
+    },
+    "contact": {
+        "title": "Entre em contato",
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Telefone",
+        "message": "Mensagem",
+        "send": "Enviar",
+        "sending": "Enviando",
+        "sent": "Enviado com sucesso!",
+        "whatsapp": "Direto pelo Whatsapp"
     }
 }

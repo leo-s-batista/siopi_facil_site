@@ -4,7 +4,7 @@
     <div class="benefits--wrapper">
 
       <div class="benefits--wrapper__list">
-        <div class="benefits--wrapper__list--item" v-for="benefit in benefits" :key="`benefit-${benefit}`">
+        <div class="benefits--wrapper__list--item" v-for="(benefit, index) in benefits" :key="`benefit-${benefit}`" data-aos="fade-right" data-os-duration="750" :data-aos-delay="index * 200" data-aos-anchor=".benefits--wrapper__list">
           <div class="benefits--wrapper__list--item__title">
             <span class="benefits--wrapper__list--item__title--icon">
               <img src="/general/benefits/check.png" alt="SiopiFácil" />
@@ -16,8 +16,8 @@
           </div>
         </div>
       </div>
-      <div class="benefits--wrapper__image">
-        <img src="/general/benefits/image_1.png" alt="SiopiFácil" />
+      <div class="benefits--wrapper__image" data-aos="fade-left" data-aos-duration="1000">
+        <img src="/general/benefits/image_4.png" alt="SiopiFácil" />
       </div>
 
     </div>
@@ -38,7 +38,7 @@ export default {
 
 <style lang="scss">
 .benefits {
-  @apply bg-gray-lighter p-8 grid gap-y-8;
+  @apply bg-blue-lighter p-8 grid gap-y-8;
   &--title {
     @apply text-center uppercase font-bold text-lg;
   }
@@ -63,7 +63,7 @@ export default {
           }
         }
         &__description {
-          @apply text-sm text-justify
+          @apply text-sm;
         }
       }
     }

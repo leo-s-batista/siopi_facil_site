@@ -4,6 +4,9 @@
     <Home />
     <Features />
     <Benefits />
+    <Testimonials />
+    <Plans />
+    <Contact />
     <CustomFooter />
   </div>
 </template>
@@ -16,6 +19,9 @@ import CustomFooter from './components/CustomFooter'
 import Home from './views/Home'
 import Features from './views/Features'
 import Benefits from './views/Benefits'
+import Plans from './views/Plans'
+import Testimonials from './views/Testimonials.vue'
+import Contact from './views/Contact.vue'
 
 export default {
   name: 'App',
@@ -24,7 +30,10 @@ export default {
     CustomFooter,
     Home,
     Features,
-    Benefits
+    Benefits,
+    Testimonials,
+    Plans,
+    Contact
   },
   computed: {
       ...mapGetters(['loading'])

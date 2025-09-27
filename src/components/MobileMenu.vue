@@ -1,7 +1,7 @@
 <template>
     <div :class="['mobile--menu', { active }]">
         <div @click="close()" class="mobile--menu__close">
-            <img src="/general/close.png" alt="Close" />
+            <img src="/general/menu/close.png" alt="Close" />
         </div>
         <ul class="mobile--menu__navigation">
             <li @click="close()" class="mobile--menu__navigation--item" v-for="section in sections" :key="`mobile-section-item-${section}`">

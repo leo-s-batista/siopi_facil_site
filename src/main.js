@@ -11,6 +11,23 @@ import VueMeta from 'vue-meta'
 import metaInfo from './seo.js'
 Vue.use(VueMeta)
 
+import VueMask from 'v-mask'
+Vue.use(VueMask)
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  offset: 250,
+  anchorPlacement: 'center-top'
+});
+
+import VeeValidate from "vee-validate";
+Vue.use(VeeValidate, {
+    events: '',
+    mode: 'eager',
+    locale: 'pt_BR'
+})
+
 import './assets/tailwind.css';
 import './assets/base.scss';
 
