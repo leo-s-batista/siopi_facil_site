@@ -14,7 +14,7 @@
                     <a href="https://painel.siopifacil.com.br" target="_blank">{{ $t(`sections.login`) }}</a>
                 </li>
                 <li class="navbar--right__item startNow">
-                    <router-link to="/comecar-agora">{{ $t(`sections.startNow`) }}</router-link>
+                    <a href="https://wa.me/5518988120272" target="_blank">{{ $t(`sections.startNow`) }}</a>
                 </li>
             </ul>
 

@@ -21,7 +21,7 @@
         </div>
 
         <div class="plans--wrapper__item--button">
-          <a>
+          <a href="https://wa.me/5518988120272" target="_blank">
             {{ $t('plans.choose') }}
           </a>
         </div>

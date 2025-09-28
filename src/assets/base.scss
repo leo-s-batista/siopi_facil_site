@@ -3,6 +3,12 @@
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+html,
+body,
+.layout {
+    @apply overflow-x-hidden;
+}
+
 :root {
     --mobile-navbar-height: 0;
     --desktop-navbar-height: 0;

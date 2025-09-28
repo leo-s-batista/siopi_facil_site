@@ -43,10 +43,10 @@
         </div>
     </div>
 
-    <div class="contact--whatsapp">
+    <a href="https://wa.me/5518988120272" target="_blank" class="contact--whatsapp">
         <img src="/general/contact/whatsapp.png" alt="Whatsapp" />
         <span>{{ $t('contact.whatsapp') }}</span>
-    </div>
+    </a>
   </section>
 </template>
 
@@ -207,7 +207,7 @@ export default {
         }
 
         &--whatsapp {
-            @apply text-base;
+            @apply text-base cursor-pointer;
         }
     }
 

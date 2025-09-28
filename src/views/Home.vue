@@ -10,10 +10,10 @@
         <p v-html="$t('home.description')"></p>
       </div>
       <div class="home--left__action">
-        <button>
+        <a class="button" href="https://wa.me/5518988120272" target="_blank">
           {{ $t('home.startNow') }}
-        </button>
-        <a>{{ $t('home.demo') }}</a>
+        </a>
+        <a href="https://wa.me/5518988120272" target="_blank">{{ $t('home.demo') }}</a>
       </div>
     </div>
     <div class="home--right">
@@ -58,14 +58,14 @@ export default {
     &__action {
       @apply grid gap-y-4 justify-items-center;
 
-      button {
-        @apply py-3 px-6 text-white font-semibold bg-orange shadow-md rounded-xl transition-all duration-300 ease-in-out;
+      .button {
+        @apply py-3 px-6 text-white font-semibold bg-orange shadow-md rounded-xl transition-all duration-300 ease-in-out no-underline;
         &:hover {
             @apply bg-orange-darker;
         }
       }
       
-      a {
+      a:not(.button) {
         @apply text-blue underline text-sm cursor-pointer;
         &:hover {
             @apply text-blue-darker;
