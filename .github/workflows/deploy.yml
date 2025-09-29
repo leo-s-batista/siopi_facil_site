@@ -1,0 +1,54 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - production  # Executa o deploy apenas na branch 'production'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout do código
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # 2. Instalar dependências e fazer build localmente
+      - name: Install Dependencies and Build Locally
+        run: |
+          npm install
+          npm run build
+
+      # 3. Copiar os arquivos da pasta dist para o servidor
+      - name: Deploy Build Files to Server
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: 145.223.26.127
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist/*"
+          target: "${{ vars.PATH }}"
+
+      # 4. Mover arquivos de dist/* para o diretório raiz (PATH)
+      - name: Move Files to Root Directory on Server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: 145.223.26.127
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ${{ vars.PATH }}
+            cp -r dist/* .
+            rm -rf dist 
+
+      # 5. Ajustar permissões no servidor
+      - name: Set Permissions on Server
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: 145.223.26.127
+          username: root
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            sudo chown -R root:root ${{ vars.PATH }}
+            sudo chmod -R 755 ${{ vars.PATH }}
