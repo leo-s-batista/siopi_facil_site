@@ -65,11 +65,10 @@ export default {
     window.onload = () => {
       if (this.$route.params.section) {
         this.goToSection(this.$route.params.section)
-
-         setTimeout(() => {
-            this.canIntersect = true
-          }, 100)
       }
+      setTimeout(() => {
+        this.canIntersect = true
+      }, 100)
     }
 
 
