@@ -1,7 +1,7 @@
 {
     "routes": {
         "home": "/",
-        "features": "/funcionalidades",
+        "features": "/recursos",
         "benefits": "/beneficios",
         "testimonials": "/depoimentos",
         "plans": "/planos",

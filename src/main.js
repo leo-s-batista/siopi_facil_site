@@ -17,7 +17,6 @@ Vue.use(VueMask)
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init({
-  offset: 250,
   anchorPlacement: 'center-top'
 });
 
@@ -27,6 +26,13 @@ Vue.use(VeeValidate, {
     mode: 'eager',
     locale: 'pt_BR'
 })
+
+
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies, { expires: '60d' })
+
+import Intersect from './directives/intersect'
+Vue.directive('intersect', Intersect)
 
 import './assets/tailwind.css';
 import './assets/base.scss';

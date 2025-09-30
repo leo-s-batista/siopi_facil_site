@@ -11,7 +11,7 @@
                 <a href="https://painel.siopifacil.com.br" target="_blank">{{ $t(`sections.login`) }}</a>
             </li>
             <li @click="close()" class="mobile--menu__navigation--item startNow">
-                <router-link to="/comecar-agora">{{ $t(`sections.startNow`) }}</router-link>
+                <a href="https://wa.me/5518988120272?text=Desejo começar grátis agora!!" target="_blank">{{ $t(`sections.startNow`) }}</a>
             </li>
         </ul>
     </div>
@@ -63,9 +63,12 @@ export default {
                 @apply mt-6 py-4 px-6 text-blue font-semibold bg-white shadow-md rounded-xl text-sm;
             }
 
-            &:not(.startNow).router-link-exact-active {
-                @apply text-orange;
-                text-shadow: 0 0 5px rgba(0,0,0,0.25);
+            .router-link-exact-active {
+                
+                &:not(.startNow) {
+                    @apply text-orange;
+                    text-shadow: 0 0 5px rgba(0,0,0,0.25);
+                }
             }
         }
     }

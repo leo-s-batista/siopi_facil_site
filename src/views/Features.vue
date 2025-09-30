@@ -24,7 +24,7 @@ export default {
     return {
       features: ['list', 'information', 'documents', 'realtime']
     }
-  }
+  },
 }
 </script>
 

@@ -21,7 +21,7 @@
         </div>
 
         <div class="plans--wrapper__item--button">
-          <a href="https://wa.me/5518988120272" target="_blank">
+          <a :href="`https://wa.me/5518988120272?text=Desejo começar o plano ${ plan.title } agora!!`" target="_blank">
             {{ $t('plans.choose') }}
           </a>
         </div>

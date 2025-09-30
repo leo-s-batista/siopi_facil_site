@@ -10,10 +10,10 @@
         <p v-html="$t('home.description')"></p>
       </div>
       <div class="home--left__action">
-        <a class="button" href="https://wa.me/5518988120272" target="_blank">
+        <a class="button" href="https://wa.me/5518988120272?text=Desejo começar grátis agora!!" target="_blank">
           {{ $t('home.startNow') }}
         </a>
-        <a href="https://wa.me/5518988120272" target="_blank">{{ $t('home.demo') }}</a>
+        <a href="https://wa.me/5518988120272?text=Desejo fazer uma demonstração!!" target="_blank">{{ $t('home.demo') }}</a>
       </div>
     </div>
     <div class="home--right">

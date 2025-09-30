@@ -14,7 +14,7 @@
                     <a href="https://painel.siopifacil.com.br" target="_blank">{{ $t(`sections.login`) }}</a>
                 </li>
                 <li class="navbar--right__item startNow">
-                    <a href="https://wa.me/5518988120272" target="_blank">{{ $t(`sections.startNow`) }}</a>
+                    <a href="https://wa.me/5518988120272?text=Desejo começar grátis agora!!" target="_blank">{{ $t(`sections.startNow`) }}</a>
                 </li>
             </ul>
 
@@ -23,7 +23,7 @@
             </div>
         </nav>
 
-        <MobileMenu :active="mobileMenu" @close="mobileMenu = false" :sections="sections" />
+        <MobileMenu :active="mobileMenu" @close="mobileMenu = false" :sections="sections" @goto="gotoSection" />
 
     </header>
 </template>
@@ -39,12 +39,30 @@ export default {
     },
     data() {
         return {
-            sections: ['features','benefits', 'testimonials', 'plans', 'faq', 'contact'],
+            sections: ['features','benefits', 'testimonials', 'plans', 'contact'],
             mobileMenu: false
         }
     },
     computed: {
         ...mapGetters(['scrollTop'])
+    },
+    methods: {
+        gotoSection(section) {
+            const elSection = document.querySelector(`section.${section}`)
+            if (elSection) {
+                const navbarHeight = document.querySelector('.navbar').offsetHeight
+                let top = elSection.offsetTop - navbarHeight
+
+                if (section === 'home') {
+                    top = 0
+                }
+
+                window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                })
+            }
+        }
     }
 }
 </script>
@@ -59,6 +77,7 @@ header {
         }
         
         &--logo {
+            @apply cursor-pointer;
             img {
                 height: 48px;
             }

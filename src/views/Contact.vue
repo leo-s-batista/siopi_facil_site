@@ -34,7 +34,7 @@
                 {{ $t('contact.sent') }}
             </button>
             <button v-else-if="sending">
-                <img src="/general/contact/sending.gif" alt="Loading" />
+                <img src="/general/contact/sending.gif" alt="Loading" style="filter: invert(1); height: 24px;" />
                 {{ $t('contact.sending') }}
             </button>
             <button @click="send()" v-else>
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <a href="https://wa.me/5518988120272" target="_blank" class="contact--whatsapp">
+    <a href="https://wa.me/5518988120272?text=Gostaria de falar mais sobre o SiopiFácil!!" target="_blank" class="contact--whatsapp">
         <img src="/general/contact/whatsapp.png" alt="Whatsapp" />
         <span>{{ $t('contact.whatsapp') }}</span>
     </a>
@@ -105,14 +105,30 @@ export default {
   },
   methods: {
     send() {
+        this.sending = true
+
         this.$validator.validateAll().then(result => {
-            console.log(result)
             if (result) {
                 this.sending = true;
-                setTimeout(() => {
-                    this.sent = true;
-                    this.sending = false;
-                }, 2000);
+
+                const data = {
+                    name: this.form.name,
+                    email: this.form.email,
+                    phone: this.form.phone,
+                }
+
+                if (this.form.message) {
+                    data.message = this.form.message
+                }
+                
+                this.$store.dispatch('sendEmail', data)
+                .then(() => {
+                    this.sending = false
+                    this.sent = true
+                })
+                .catch((e) => {
+                    console.log(e)
+                })
             }
         });
     }
@@ -158,7 +174,10 @@ export default {
             @apply mt-8 flex justify-center;
 
             button {
-                @apply block bg-orange text-white font-bold py-2 px-16 rounded-lg shadow transition-all duration-300 cursor-pointer;
+                @apply bg-orange text-white font-bold py-2 px-16 rounded-lg shadow transition-all duration-300 cursor-pointer  flex justify-center items-center;
+                img {
+                    height: 32px;
+                }
                 &:hover {
                     @apply bg-orange-darker;
                 }
@@ -201,7 +220,10 @@ export default {
                 @apply mt-8 flex justify-center;
 
                 button {
-                    @apply py-3 px-16;
+                    @apply gap-x-2 py-3 px-16 flex justify-center items-center;
+                    img {
+                        height: 32px;
+                    }
                 }
             }
         }
